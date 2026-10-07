@@ -44,7 +44,7 @@
 
   // members
   const ml=$("#members");
-  if(ml){ml.innerHTML=GROUPS.map(g=>{const ms=SITE.members.filter(m=>m.group===g[0]);if(!ms.length)return"";
+  if(ml){ml.innerHTML=GROUPS.map(g=>{const ms=SITE.members.filter(m=>m.group===g[0]);if(!ms.length)return (g[0]==="phd"||g[0]==="ms")?`<h2>${b2(g[1],g[2])}</h2><p style="color:var(--mute)">${b2("모집 중입니다.","Positions open.")}</p>`:"";
     return `<h2>${b2(g[1],g[2])}</h2><div class="people">${ms.map(m=>`<div class="person">
       <div class="ph">${m.photo?`<img src="${esc(m.photo)}" alt="">`:esc((m.name.en||"?")[0])}</div>
       <b>${bi(m.name)}</b><span>${bi(m.role)}</span><span>${bi(m.topic)}</span></div>`).join("")}</div>`}).join("");}
