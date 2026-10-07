@@ -26,12 +26,7 @@ const SITE = {
 
   /* 구성원 — group: "phd" | "ms" | "intern" | "staff" | "alumni" */
   members: [
-    { name: { ko: "홍길동", en: "Gildong Hong" }, group: "phd",
-      role: { ko: "박사과정 (예시)", en: "Ph.D. student (example)" },
-      topic: { ko: "연구 주제", en: "Research topic" }, photo: "" },
-    { name: { ko: "김연구", en: "Yeongu Kim" }, group: "ms",
-      role: { ko: "석사과정 (예시)", en: "M.S. student (example)" },
-      topic: { ko: "연구 주제", en: "Research topic" }, photo: "" },
+  
   ],
 
   /* 논문 — 최신 논문을 위에 추가 */
