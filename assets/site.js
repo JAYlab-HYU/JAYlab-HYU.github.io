@@ -23,7 +23,7 @@
     <nav class="main">${NAV.map(n=>`<a href="${n[0]}" class="${n[0]===here?"on":""}">${b2(n[1],n[2])}</a>`).join("")}</nav>
     <div class="lang"><button data-l="ko">KO</button><button data-l="en">EN</button></div></div></header>`;
   $("#footer").outerHTML=`<footer class="site"><div class="wrap">
-    <b>Jay Lab</b> · ${b2("첨단 약물전달 및 산업약학 연구실","Advanced Drug Delivery & Industrial Pharmacy")}<br>
+    <b>Jay Lab</b> · ${b2("물리약학 연구실","Advanced Drug Delivery & Industrial Pharmacy")}<br>
     ${b2("한양대학교 약학대학","College of Pharmacy, Hanyang University")}
     <div class="c">© ${new Date().getFullYear()} Jay Lab. All rights reserved.</div></div></footer>`;
   document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
