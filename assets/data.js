@@ -40,33 +40,6 @@ const SITE = {
   
   ],
 
-  /* 저널 표지 — 표지 이미지를 images/covers 폴더에 올리고, 해당 줄 앞의 // 를 지운 뒤 파일 이름을 적으면
-     그 저널의 모든 논문 옆에 표지가 나타납니다. 표지가 없는 저널은 저널 이름이 적힌 기본 칸으로 표시됩니다. */
-  covers: {
-    // "AAPS Journal": "images/covers/파일이름.jpg",
-    // "Advanced Drug Delivery Reviews": "images/covers/파일이름.jpg",
-    // "Advanced Science": "images/covers/파일이름.jpg",
-    // "Asian Journal of Pharmaceutical Sciences": "images/covers/파일이름.jpg",
-    // "Biomaterials": "images/covers/파일이름.jpg",
-    // "Biomaterials Advances": "images/covers/파일이름.jpg",
-    // "Biomedicine & Pharmacotherapy": "images/covers/파일이름.jpg",
-    // "Carbohydrate Polymers": "images/covers/파일이름.jpg",
-    // "Colloids and Surfaces B: Biointerfaces": "images/covers/파일이름.jpg",
-    // "Composites Part B: Engineering": "images/covers/파일이름.jpg",
-    // "Drug Delivery and Translational Research": "images/covers/파일이름.jpg",
-    // "International Journal of Biological Macromolecules": "images/covers/파일이름.jpg",
-    // "International Journal of Molecular Sciences": "images/covers/파일이름.jpg",
-    // "International Journal of Nanomedicine": "images/covers/파일이름.jpg",
-    // "International Journal of Pharmaceutics": "images/covers/파일이름.jpg",
-    // "Journal of Controlled Release": "images/covers/파일이름.jpg",
-    // "Journal of Drug Delivery Science and Technology": "images/covers/파일이름.jpg",
-    // "Journal of Molecular Liquids": "images/covers/파일이름.jpg",
-    // "Journal of Pharmaceutical Investigation": "images/covers/파일이름.jpg",
-    // "Materials & Design": "images/covers/파일이름.jpg",
-    // "Nature Communications": "images/covers/파일이름.jpg",
-    // "Pharmaceutics": "images/covers/파일이름.jpg",
-  },
-
   /* 논문 — 같은 연도 안에서는 여기 적힌 순서대로 표시됩니다.
      · role: "first"(1저자) | "corresponding"(교신저자) | "cofirst"(공동1저자) | ""(표시 없음)
      · pi: 저자 목록에서 굵게 표시할 이름   · doi: "10.xxxx/..." 를 넣으면 제목과 DOI 링크가 연결됩니다. */
@@ -123,7 +96,7 @@ const SITE = {
     { year: 2024, role: "first",
       title: "Microneedles integrated with crystallinity control for poorly water-soluble drugs: Enhanced bioavailability and innovative controlled release system",
       authors: "Kim, J.S., Woo, M.R., Cheon, S., Ji, S.H., Park, S., Woo, S., Kim, J.O., Jin, S.G., Choi, H.G.",
-      journal: "Materials & Design", ref: "247, 113371-113384", doi: "" },
+      journal: "Materials & Design", ref: "247, 113371", doi: "" },
     { year: 2022, role: "first",
       title: "Hydroxypropyl-beta-cyclodextrin-based solid dispersed granules: A prospective alternative to conventional solid dispersion",
       authors: "Kim, J.S., Din, F.U., Choi, Y.J., Woo, M.R., Cheon, S., Ji, S.H., Park, S., Kim, J.O., Youn, Y.S., Lim, S.J., Jin, S.G., Choi, H.G.",
@@ -140,13 +113,13 @@ const SITE = {
       title: "Comparative study between high-pressure homogenisation and Shirasu porous glass membrane technique in sildenafil base-loaded solid SNEDDS: Effects on physicochemical properties and in vivo characteristics",
       authors: "Kim, J.S., Din, F.U., Lee, S.M., Kim, D.S., Choi, Y.J., Woo, M.R., Kim, J.O., Youn, Y.S., Jin, S.G., Choi, H.G.",
       journal: "International Journal of Pharmaceutics", ref: "592, 120039", doi: "" },
-    { year: 2024, role: "first",
+    { year: 2025, role: "first",
       title: "Single-Cell Nanoencapsulation Enables Fabrication of Probiotics-Loaded Hydrogel Dressing with Improved Wound Healing Efficacy in vivo",
       authors: "Kim, J.S., Kim, B.J., Lee, S.M., Choi, I., Park, J.H., Choi, H.G., Jin, S.G.",
       journal: "Journal of Pharmaceutical Investigation", ref: "55, 321-331", doi: "" },
     { year: 2024, role: "first",
       title: "Physicochemical characterization and in vivo assessment of novel apixaban-loaded polymeric nano-aggregates",
-      authors: "Kim, J.S., Din, F.U., Lee, H.I., Kim, Woo, M.R., Cheon, S., Park, S., Woo, S., Jin, S.G., Choi, H.G.",
+      authors: "Kim, J.S., Din, F.U., Lee, H.I., Woo, M.R., Cheon, S., Park, S., Woo, S., Jin, S.G., Choi, H.G.",
       journal: "Journal of Pharmaceutical Investigation", ref: "1-13", doi: "" },
     { year: 2022, role: "first",
       title: "Comparison of the physicochemical properties, aqueous solubility, and oral bioavailability of rivaroxaban-loaded high-pressure homogenised and Shirasu porous glass membrane emulsified solid self-nanoemulsifying drug delivery systems",

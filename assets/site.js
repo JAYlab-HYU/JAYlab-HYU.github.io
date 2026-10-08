@@ -52,13 +52,12 @@
   // publications
   const pl=$("#pubs");
   if(pl){const ROLE={first:["1저자","First author"],corresponding:["교신저자","Corresponding author"],cofirst:["공동1저자","Co-first author"]};
-    const cv=SITE.covers||{}, pi=SITE.pi||"";
+    const pi=SITE.pi||"";
     const au=a=>pi?esc(a).split(esc(pi)).join(`<b>${esc(pi)}</b>`):esc(a);
     const ys=[...new Set(SITE.publications.map(p=>p.year))].sort((a,b)=>b-a);
     pl.innerHTML=`<p class="pub-count">${b2(`총 ${SITE.publications.length}편`,`${SITE.publications.length} publications`)}</p>`+ys.map(y=>`<h2 class="year">${y}</h2><ul class="pubs">${SITE.publications.filter(p=>p.year===y).map(p=>{
       const r=ROLE[p.role], url=p.doi?`https://doi.org/${esc(p.doi)}`:"";
-      return `<li><div class="cover">${cv[p.journal]?`<img src="${esc(cv[p.journal])}" alt="${esc(p.journal)}" loading="lazy">`:`<span lang="en">${esc(p.journal)}</span>`}</div>
-      <div class="pb">${r?`<span class="role">${b2(r[0],r[1])}</span>`:""}
+      return `<li><div class="pb">${r?`<span class="role">${b2(r[0],r[1])}</span>`:""}
       <h3>${url?`<a href="${url}" target="_blank" rel="noopener">${esc(p.title)}</a>`:esc(p.title)}</h3>
       <p class="j"><i>${esc(p.journal)}</i> ${p.year}${p.ref?", "+esc(p.ref):""}</p>
       <p class="a">${au(p.authors)}</p>
