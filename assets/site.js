@@ -1,6 +1,6 @@
 (function(){
   const NAV=[["index.html","홈","Home"],["research.html","연구","Research"],["pi.html","PI","PI"],["team.html","멤버","Members"],["publications.html","논문","Publications"],["news.html","소식","News"],["join.html","모집","Join"],["contact.html","연락처","Contact"]];
-  const TAGS={news:["소식","News"],award:["수상","Award"],talk:["발표","Talk"],paper:["논문","Paper"]};
+  const TAGS={news:["소식","News"],notice:["공지","Notice"],award:["수상","Award"],talk:["발표","Talk"],paper:["논문","Paper"]};
   const GROUPS=[["phd","박사과정","Ph.D. Students"],["ms","석사과정","M.S. Students"],["intern","학부연구생","Undergraduate Researchers"],["staff","연구원","Researchers"],["alumni","졸업생","Alumni"]];
   const $=s=>document.querySelector(s);
   const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -39,7 +39,7 @@
     const items=[...SITE.news].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,lim);
     nl.innerHTML=items.map(n=>{const t=TAGS[n.tag]||TAGS.news;
       return `<li><div class="meta"><span class="tag ${esc(n.tag)}">${b2(t[0],t[1])}</span>${fmt(n.date)}</div>
-      <h3>${bi(n.title)}</h3><p>${bi(n.body)}</p>
+      <h3>${bi(n.title)}</h3><p>${bi(n.body)}</p>${n.link?`<p class="more"><a href="${esc(n.link)}" target="_blank" rel="noopener">${b2("자세히 보기","Read more")} ↗</a></p>`:""}
       ${(n.images&&n.images.length)?`<div class="pics">${n.images.map(i=>`<img src="${esc(i)}" alt="" loading="lazy">`).join("")}</div>`:""}</li>`}).join("");}
 
   // members
