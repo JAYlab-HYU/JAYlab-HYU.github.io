@@ -135,7 +135,7 @@ footer.site .c{margin-top:14px;opacity:.6;font-size:.82rem}
 .steps+.note{margin-top:28px}
 /* collaborators */
 .pub-count{color:var(--mute);margin:0 0 4px;font-size:.92rem}
-.collab{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:0 0 48px}
+.collab{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:0}
 .collab .card h3{margin:0 0 2px;font-size:1.2rem;color:var(--blue-d)}
 .collab .card .c{font-size:.8rem;font-weight:700;letter-spacing:.06em;color:var(--accent);margin:0 0 10px}
 .collab .card .p{font-weight:600;color:var(--ink);margin:0 0 4px;font-size:.95rem}
