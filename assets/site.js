@@ -51,9 +51,18 @@
 
   // publications
   const pl=$("#pubs");
-  if(pl){const ys=[...new Set(SITE.publications.map(p=>p.year))].sort((a,b)=>b-a);
-    pl.innerHTML=ys.map(y=>`<h2 class="year">${y}</h2><ol class="pubs">${SITE.publications.filter(p=>p.year===y).map(p=>
-      `<li><span class="t">${esc(p.title)}</span><br>${esc(p.authors)}<br><span class="j">${esc(p.journal)}</span>${p.doi?` · <a href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">doi:${esc(p.doi)}</a>`:""}</li>`).join("")}</ol>`).join("");}
+  if(pl){const ROLE={first:["1저자","First author"],corresponding:["교신저자","Corresponding author"],cofirst:["공동1저자","Co-first author"]};
+    const cv=SITE.covers||{}, pi=SITE.pi||"";
+    const au=a=>pi?esc(a).split(esc(pi)).join(`<b>${esc(pi)}</b>`):esc(a);
+    const ys=[...new Set(SITE.publications.map(p=>p.year))].sort((a,b)=>b-a);
+    pl.innerHTML=`<p class="pub-count">${b2(`총 ${SITE.publications.length}편`,`${SITE.publications.length} publications`)}</p>`+ys.map(y=>`<h2 class="year">${y}</h2><ul class="pubs">${SITE.publications.filter(p=>p.year===y).map(p=>{
+      const r=ROLE[p.role], url=p.doi?`https://doi.org/${esc(p.doi)}`:"";
+      return `<li><div class="cover">${cv[p.journal]?`<img src="${esc(cv[p.journal])}" alt="${esc(p.journal)}" loading="lazy">`:`<span lang="en">${esc(p.journal)}</span>`}</div>
+      <div class="pb">${r?`<span class="role">${b2(r[0],r[1])}</span>`:""}
+      <h3>${url?`<a href="${url}" target="_blank" rel="noopener">${esc(p.title)}</a>`:esc(p.title)}</h3>
+      <p class="j"><i>${esc(p.journal)}</i> ${p.year}${p.ref?", "+esc(p.ref):""}</p>
+      <p class="a">${au(p.authors)}</p>
+      ${url?`<p class="d"><a href="${url}" target="_blank" rel="noopener">DOI ↗</a></p>`:""}</div></li>`}).join("")}</ul>`).join("");}
 
   // slider
   const sl=$("#slider");
