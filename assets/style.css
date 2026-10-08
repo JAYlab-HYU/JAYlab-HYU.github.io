@@ -130,8 +130,6 @@ footer.site .c{margin-top:14px;opacity:.6;font-size:.82rem}
 .steps .k{display:block;font-size:.74rem;font-weight:700;letter-spacing:.06em;color:var(--accent)}
 .steps b{display:block;font-size:1rem;line-height:1.35;margin:2px 0}
 .steps .s{display:block;font-size:.84rem;color:var(--mute);line-height:1.45}
-.steps.timeline{margin:0 0 44px}
-.steps.timeline b{font-size:.92rem}.steps.timeline .s{font-size:.78rem}
 .steps+.note{margin-top:28px}
 /* collaborators */
 .pub-count{color:var(--mute);margin:0 0 4px;font-size:.92rem}
