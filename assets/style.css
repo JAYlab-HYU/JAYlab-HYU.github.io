@@ -108,6 +108,13 @@ footer.site .c{margin-top:14px;opacity:.6;font-size:.82rem}
 .callout{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:24px;margin-bottom:36px;background:#fff}
 .callout h2{margin:8px 0 14px;font-size:1.3rem}
 .callout .cv{margin-bottom:18px}
-.fig{margin:20px 0 0;max-width:720px}
+.area .body{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start}
+.fig{margin:0}
+.fig a{display:block}
 .fig img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff}
-.fig figcaption{margin-top:8px;font-size:.84rem;color:var(--mute)}
+.fig figcaption{margin-top:6px;font-size:.78rem;color:var(--mute);line-height:1.45}
+.philo{padding-bottom:8px}
+.philo h2{margin:2px 0 14px;font-size:1.6rem}
+.philo p:not(.sec-label){max-width:780px;margin:0;font-size:1.02rem;line-height:1.9;color:#2a3540}
+.philo+.block{padding-top:24px}
+@media(max-width:820px){.area .body{grid-template-columns:1fr;gap:16px}.fig{max-width:420px}}
