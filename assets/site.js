@@ -55,11 +55,7 @@
     const pi=SITE.pi||"";
     const au=a=>pi?esc(a).split(esc(pi)).join(`<b>${esc(pi)}</b>`):esc(a);
     const ys=[...new Set(SITE.publications.map(p=>p.year))].sort((a,b)=>b-a);
-    const P=SITE.publications,cnt={};P.forEach(p=>cnt[p.year]=(cnt[p.year]||0)+1);
-    const y0=Math.min(...ys),y1=Math.max(...ys),mx=Math.max(...Object.values(cnt)),nf=P.filter(p=>p.role==="first").length;let bars="";
-    for(let y=y0;y<=y1;y++){const c=cnt[y]||0;bars+=`<div class="bar"><span class="v">${c||""}</span><i style="height:${c?Math.max(6,c/mx*100):0}%"></i><span class="y">${y}</span></div>`;}
-    pl.innerHTML=`<div class="pub-info"><div class="stats"><div><b>${P.length}</b><span>${b2("전체 논문","Publications")}</span></div><div><b>${nf}</b><span>${b2("1저자 논문","First-author papers")}</span></div><div><b>${new Set(P.map(p=>p.journal)).size}</b><span>${b2("게재 저널","Journals")}</span></div></div>
-      <div class="chart" role="img" aria-label="Publications per year"><p>${b2("연도별 논문 수","Publications per year")}</p><div class="bars">${bars}</div></div></div>`+ys.map(y=>`<h2 class="year">${y}</h2><ul class="pubs">${SITE.publications.filter(p=>p.year===y).map(p=>{
+    pl.innerHTML=`<p class="pub-count">${b2(`총 ${SITE.publications.length}편`,`${SITE.publications.length} publications`)}</p>`+ys.map(y=>`<h2 class="year">${y}</h2><ul class="pubs">${SITE.publications.filter(p=>p.year===y).map(p=>{
       const r=ROLE[p.role], url=p.doi?`https://doi.org/${esc(p.doi)}`:"";
       return `<li><div class="pb">${r?`<span class="role">${b2(r[0],r[1])}</span>`:""}
       <h3>${url?`<a href="${url}" target="_blank" rel="noopener">${esc(p.title)}</a>`:esc(p.title)}</h3>
