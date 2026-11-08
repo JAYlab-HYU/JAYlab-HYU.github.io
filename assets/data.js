@@ -16,6 +16,16 @@ const SITE = {
      · 본문에서 줄을 바꾸려면 \\n 을 넣습니다.  · link: "주소" 를 넣으면 "자세히 보기" 링크가 붙습니다(없으면 생략). */
   news: [
     {
+      date: "2026-11-08",
+      tag: "notice",
+      title: { ko: "[대학원생 상시 모집] 석사, 박사, 석박사통합과정",
+               en: "[Open Call] Graduate students — M.S., Ph.D., and integrated M.S./Ph.D." },
+      body:  { ko: "석사, 박사, 석박사통합과정에 지원하고자 하는 분들은 jungsuk@hanyang.ac.kr 로 CV를 보내주세요.",
+               en: "Prospective M.S., Ph.D., and integrated M.S./Ph.D. students, please send your CV to jungsuk@hanyang.ac.kr." },
+      link: "mailto:jungsuk@hanyang.ac.kr",
+      images: [],
+    },
+    {
       date: "2026-10-08",
       tag: "notice",
       title: { ko: "2027학년도 전기 특별전형 일반대학원 신입학 모집요강 공고",
