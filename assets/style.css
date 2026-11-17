@@ -144,3 +144,8 @@ footer.site .c{margin-top:14px;opacity:.6;font-size:.82rem}
  .steps li:last-child::before{display:none}
  .steps li::after{top:5px}
 }
+
+/* JAY Lab acronym */
+.hero .eyebrow.jay-line{text-transform:none;letter-spacing:.01em;font-size:1.05rem;font-weight:500;color:var(--mute)}
+.jay b{font-weight:800;color:var(--blue-d)}
+footer.site .jay b{color:#fff}

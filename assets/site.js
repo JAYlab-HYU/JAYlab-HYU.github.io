@@ -18,14 +18,14 @@
   // header / footer
   const here=(location.pathname.split("/").pop()||"index.html");
   $("#header").outerHTML=`<a class="skip" href="#main">본문 바로가기</a><header class="site"><div class="wrap">
-    <a class="brand" href="index.html">Jay Lab<small>HANYANG UNIVERSITY</small></a>
+    <a class="brand" href="index.html">JAY Lab<small>HANYANG UNIVERSITY</small></a>
     <button class="menu-btn" aria-label="Menu">☰</button>
     <nav class="main">${NAV.map(n=>`<a href="${n[0]}" class="${n[0]===here?"on":""}">${b2(n[1],n[2])}</a>`).join("")}</nav>
     <div class="lang"><button data-l="ko">KO</button><button data-l="en">EN</button></div></div></header>`;
   $("#footer").outerHTML=`<footer class="site"><div class="wrap">
-    <b>Jay Lab</b> · ${b2("물리약학 연구실","Advanced Drug Delivery & Industrial Pharmacy")}<br>
+    <b>JAY Lab</b><span class="ko"> · 물리약학 연구실</span><span class="en jay">: <b>J</b>ourney from <b>A</b>dvanced delivery to <b>Y</b>ou</span><br>
     ${b2("한양대학교 약학대학","College of Pharmacy, Hanyang University")}
-    <div class="c">© ${new Date().getFullYear()} Jay Lab. All rights reserved.</div></div></footer>`;
+    <div class="c">© ${new Date().getFullYear()} JAY Lab. All rights reserved.</div></div></footer>`;
   document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
   $(".menu-btn").onclick=()=>$("nav.main").classList.toggle("open");
   setLang(lang);

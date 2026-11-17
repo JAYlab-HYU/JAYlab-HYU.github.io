@@ -1,5 +1,5 @@
 /* ==========================================================
-   Jay Lab 홈페이지 내용 파일 — 소식/구성원/논문은 이 파일만 고치면 됩니다.
+   JAY Lab 홈페이지 내용 파일 — 소식/구성원/논문은 이 파일만 고치면 됩니다.
    · 항목을 추가할 때는 { ... } 한 덩어리를 복사해 맨 위에 붙이고 내용을 바꾸세요.
    · 따옴표(" ")와 쉼표(,)를 지우지 않도록 주의하세요.
    · 사진은 images 폴더에 올린 뒤 "images/파일이름.jpg" 형태로 적습니다.
@@ -38,7 +38,7 @@ const SITE = {
     {
       date: "2026-10-07",
       tag: "news",
-      title: { ko: "Jay Lab 홈페이지 개설", en: "Jay Lab website launched" },
+      title: { ko: "JAY Lab 홈페이지 개설", en: "JAY Lab website launched" },
       body:  { ko: "연구실 홈페이지를 열었습니다. 연구 소식과 모집 안내를 이곳에서 전합니다.",
                en: "Our lab website is now online. Research news and openings will be posted here." },
       images: [],

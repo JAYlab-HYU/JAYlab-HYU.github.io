@@ -1,4 +1,4 @@
-# Jay Lab 홈페이지
+# JAY Lab 홈페이지
 
 주소: https://jaylab-hyu.github.io
 
